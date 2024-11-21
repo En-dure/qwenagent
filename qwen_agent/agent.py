@@ -38,6 +38,7 @@ class Agent(ABC):
             description: The description of this agent, which will be used for multi_agent.
         """
         if isinstance(llm, dict):
+            # 获取大模型
             self.llm = get_chat_model(llm)
         else:
             self.llm = llm

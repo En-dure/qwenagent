@@ -100,7 +100,7 @@ class Memory(Agent):
                     keyword = last[-1].content.strip()
                 else:
                     keyword = ''
-
+                # {"keywords_zh": ["画", "鲜花", "花朵"], "keywords_en": ["draw", "flower", "bloom"], "text": "画一只鲜花"}
                 if keyword.startswith('```json'):
                     keyword = keyword[len('```json'):]
                 if keyword.endswith('```'):
