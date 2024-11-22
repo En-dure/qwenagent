@@ -31,6 +31,7 @@ llm_cfg = {
     'model': 'qwen/Qwen2___5-72B-Instruct',
     'model_server': 'http://192.168.20.54:8866/v1',  # base_url，也称为 api_base
     'api_key': '1234',
+    "stream": True,
     # （可选） LLM 的超参数：
     'generate_cfg': {
         'top_p': 0.8

@@ -34,7 +34,17 @@ class MyImageGen(BaseTool):
 
 
 def init_agent_service():
-    llm_cfg = {'model': 'qwen-max'}
+    llm_cfg = {
+
+    'model': 'qwen/Qwen2___5-72B-Instruct',
+    'model_server': 'http://192.168.20.54:8866/v1',  # base_url，也称为 api_base
+    'api_key': '1234',
+    "stream": False,
+    # （可选） LLM 的超参数：
+    'generate_cfg': {
+        'top_p': 0.8,
+        }
+    }
     system = ("According to the user's request, you first draw a picture and then automatically "
               'run code to download the picture and select an image operation from the given document '
               'to process the image')
